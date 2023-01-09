@@ -8,15 +8,15 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct CongentView: View {
     var body: some View {
         MainMenu(gameModeRef: gameMode.addition)
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct CongentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        CongentView()
     }
 }
 
