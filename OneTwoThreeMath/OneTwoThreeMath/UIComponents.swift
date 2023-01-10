@@ -66,9 +66,13 @@ struct back: View {
 
     var body: some View {
         Spacer()
-        Text("<-")
-            .font(chalk)
-            .foregroundColor(.white)
+        Button {
+            print("Go down in difficulty")
+        } label: {
+            Text("<-")
+                .font(chalk)
+                .foregroundColor(.white)
+        }
         Spacer()
     }
 }
@@ -77,9 +81,13 @@ struct forth: View {
 
     var body: some View {
         Spacer()
-        Text("->")
-            .font(chalk)
-            .foregroundColor(.white)
+        Button {
+            print("Go up in difficulty")
+        } label: {
+            Text("->")
+                .font(chalk)
+                .foregroundColor(.white)
+        }
         Spacer()
     }
 }

@@ -16,14 +16,36 @@ enum mathOperator {
     case divison
 }
 
+enum gameDifficulty {
+    case easy
+    case medium
+    case hard
+}
+
+//add switch statement to change image color w color multiplier
+func setGameColor(difficulty: gameDifficulty) -> Color {
+    switch difficulty {
+    case .easy:
+        return .green
+    case .medium:
+        return .yellow
+    case .hard:
+        return .red
+    }
+}
+
 struct HomeView: View {
     @State var operatorSelection: mathOperator
+    @State var difficultySelection: gameDifficulty
     
     var body: some View {
         NavigationView {
             ZStack {
                 //background image
-                Image("green").resizable().edgesIgnoringSafeArea(.all)
+                Image("green")
+                    .resizable()
+                    .edgesIgnoringSafeArea(.all)
+                    .colorMultiply(setGameColor(difficulty: difficultySelection))
                 
                 VStack {
                     Text("OneTwoThree")
@@ -36,7 +58,10 @@ struct HomeView: View {
                     
                     Spacer(minLength: 15)
                     
-                    
+                    HStack {
+                        back()
+                        forth()
+                    }
                     
                     Spacer(minLength: 15)
                     
@@ -55,6 +80,7 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(operatorSelection: .addition)
+        HomeView(operatorSelection: .addition,
+                 difficultySelection: .easy)
     }
 }
