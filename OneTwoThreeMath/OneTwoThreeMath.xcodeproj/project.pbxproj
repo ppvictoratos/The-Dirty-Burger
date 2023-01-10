@@ -16,16 +16,17 @@
 		1ACD1560296CD28D00E72020 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACD155A296CD28D00E72020 /* GameModel.swift */; };
 		1ACD1561296CD28D00E72020 /* StartCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACD155B296CD28D00E72020 /* StartCountView.swift */; };
 		1ACD1562296CD28D00E72020 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACD155C296CD28D00E72020 /* UserView.swift */; };
-		1ACD1563296CD28D00E72020 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ACD155D296CD28D00E72020 /* Main.storyboard */; };
 		1ACD1564296CD28D00E72020 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACD155E296CD28D00E72020 /* GameView.swift */; };
 		1ACD1565296CD28D00E72020 /* GameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACD155F296CD28D00E72020 /* GameOverView.swift */; };
-		1ACD156E296CD35200E72020 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACD1567296CD35100E72020 /* ContentView.swift */; };
+		1ACD156E296CD35200E72020 /* CongtentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACD1567296CD35100E72020 /* CongtentView.swift */; };
 		1ACD156F296CD35200E72020 /* UserInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACD1568296CD35100E72020 /* UserInputView.swift */; };
-		1ACD1570296CD35200E72020 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACD1569296CD35200E72020 /* Line.swift */; };
-		1ACD1571296CD35200E72020 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACD156A296CD35200E72020 /* GameModel.swift */; };
+		1ACD1571296CD35200E72020 /* GamgeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACD156A296CD35200E72020 /* GamgeModel.swift */; };
 		1ACD1572296CD35200E72020 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACD156B296CD35200E72020 /* MainMenu.swift */; };
-		1ACD1573296CD35200E72020 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACD156C296CD35200E72020 /* UserView.swift */; };
-		1ACD1574296CD35200E72020 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACD156D296CD35200E72020 /* GameView.swift */; };
+		1ACD1573296CD35200E72020 /* UsergView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACD156C296CD35200E72020 /* UsergView.swift */; };
+		1ACD1574296CD35200E72020 /* GamgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACD156D296CD35200E72020 /* GamgeView.swift */; };
+		1ACD1577296CD95300E72020 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACD1576296CD95300E72020 /* HomeView.swift */; };
+		1ACD1579296CDC4F00E72020 /* UIComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACD1578296CDC4F00E72020 /* UIComponents.swift */; };
+		1ACD157B296CDDB800E72020 /* PlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACD157A296CDDB800E72020 /* PlayView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,17 +40,18 @@
 		1ACD155A296CD28D00E72020 /* GameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		1ACD155B296CD28D00E72020 /* StartCountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartCountView.swift; sourceTree = "<group>"; };
 		1ACD155C296CD28D00E72020 /* UserView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
-		1ACD155D296CD28D00E72020 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		1ACD155E296CD28D00E72020 /* GameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		1ACD155F296CD28D00E72020 /* GameOverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverView.swift; sourceTree = "<group>"; };
-		1ACD1567296CD35100E72020 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1ACD1567296CD35100E72020 /* CongtentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongtentView.swift; sourceTree = "<group>"; };
 		1ACD1568296CD35100E72020 /* UserInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInputView.swift; sourceTree = "<group>"; };
-		1ACD1569296CD35200E72020 /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
-		1ACD156A296CD35200E72020 /* GameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
+		1ACD156A296CD35200E72020 /* GamgeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamgeModel.swift; sourceTree = "<group>"; };
 		1ACD156B296CD35200E72020 /* MainMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
-		1ACD156C296CD35200E72020 /* UserView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
-		1ACD156D296CD35200E72020 /* GameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		1ACD156C296CD35200E72020 /* UsergView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsergView.swift; sourceTree = "<group>"; };
+		1ACD156D296CD35200E72020 /* GamgeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamgeView.swift; sourceTree = "<group>"; };
 		1ACD1575296CD35800E72020 /* Chalkduster.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chalkduster.ttf; sourceTree = "<group>"; };
+		1ACD1576296CD95300E72020 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		1ACD1578296CDC4F00E72020 /* UIComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIComponents.swift; sourceTree = "<group>"; };
+		1ACD157A296CDDB800E72020 /* PlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,9 @@
 			children = (
 				1ACD1547296CD1FE00E72020 /* OneTwoThreeMathApp.swift */,
 				1ACD1549296CD1FE00E72020 /* ContentView.swift */,
+				1ACD1576296CD95300E72020 /* HomeView.swift */,
+				1ACD157A296CDDB800E72020 /* PlayView.swift */,
+				1ACD1578296CDC4F00E72020 /* UIComponents.swift */,
 				1ACD1566296CD33600E72020 /* SUI Project */,
 				1ACD1555296CD26100E72020 /* OG Project */,
 				1ACD154B296CD1FE00E72020 /* Assets.xcassets */,
@@ -106,7 +111,6 @@
 				1ACD155A296CD28D00E72020 /* GameModel.swift */,
 				1ACD155F296CD28D00E72020 /* GameOverView.swift */,
 				1ACD155E296CD28D00E72020 /* GameView.swift */,
-				1ACD155D296CD28D00E72020 /* Main.storyboard */,
 				1ACD155B296CD28D00E72020 /* StartCountView.swift */,
 				1ACD155C296CD28D00E72020 /* UserView.swift */,
 				1ACD1558296CD28200E72020 /* SettingsView.swift */,
@@ -118,13 +122,12 @@
 		1ACD1566296CD33600E72020 /* SUI Project */ = {
 			isa = PBXGroup;
 			children = (
-				1ACD1567296CD35100E72020 /* ContentView.swift */,
-				1ACD156A296CD35200E72020 /* GameModel.swift */,
-				1ACD156D296CD35200E72020 /* GameView.swift */,
-				1ACD1569296CD35200E72020 /* Line.swift */,
+				1ACD1567296CD35100E72020 /* CongtentView.swift */,
+				1ACD156A296CD35200E72020 /* GamgeModel.swift */,
+				1ACD156D296CD35200E72020 /* GamgeView.swift */,
 				1ACD156B296CD35200E72020 /* MainMenu.swift */,
 				1ACD1568296CD35100E72020 /* UserInputView.swift */,
-				1ACD156C296CD35200E72020 /* UserView.swift */,
+				1ACD156C296CD35200E72020 /* UsergView.swift */,
 				1ACD1575296CD35800E72020 /* Chalkduster.ttf */,
 			);
 			path = "SUI Project";
@@ -188,7 +191,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1ACD1563296CD28D00E72020 /* Main.storyboard in Resources */,
 				1ACD154F296CD1FE00E72020 /* Preview Assets.xcassets in Resources */,
 				1ACD154C296CD1FE00E72020 /* Assets.xcassets in Resources */,
 			);
@@ -202,20 +204,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				1ACD1560296CD28D00E72020 /* GameModel.swift in Sources */,
+				1ACD157B296CDDB800E72020 /* PlayView.swift in Sources */,
+				1ACD1579296CDC4F00E72020 /* UIComponents.swift in Sources */,
 				1ACD1561296CD28D00E72020 /* StartCountView.swift in Sources */,
 				1ACD1557296CD27A00E72020 /* MainMenuView.swift in Sources */,
 				1ACD1559296CD28200E72020 /* SettingsView.swift in Sources */,
 				1ACD154A296CD1FE00E72020 /* ContentView.swift in Sources */,
+				1ACD1577296CD95300E72020 /* HomeView.swift in Sources */,
 				1ACD1548296CD1FE00E72020 /* OneTwoThreeMathApp.swift in Sources */,
-				1ACD156E296CD35200E72020 /* ContentView.swift in Sources */,
-				1ACD1573296CD35200E72020 /* UserView.swift in Sources */,
+				1ACD156E296CD35200E72020 /* CongtentView.swift in Sources */,
+				1ACD1573296CD35200E72020 /* UsergView.swift in Sources */,
 				1ACD1564296CD28D00E72020 /* GameView.swift in Sources */,
 				1ACD1565296CD28D00E72020 /* GameOverView.swift in Sources */,
 				1ACD1572296CD35200E72020 /* MainMenu.swift in Sources */,
-				1ACD1570296CD35200E72020 /* Line.swift in Sources */,
 				1ACD156F296CD35200E72020 /* UserInputView.swift in Sources */,
-				1ACD1571296CD35200E72020 /* GameModel.swift in Sources */,
-				1ACD1574296CD35200E72020 /* GameView.swift in Sources */,
+				1ACD1571296CD35200E72020 /* GamgeModel.swift in Sources */,
+				1ACD1574296CD35200E72020 /* GamgeView.swift in Sources */,
 				1ACD1562296CD28D00E72020 /* UserView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
