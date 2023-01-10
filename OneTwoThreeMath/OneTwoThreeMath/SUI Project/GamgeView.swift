@@ -8,8 +8,6 @@
 
 import SwiftUI
 
-let chalk = Font.custom("Chalkduster", size: 45)
-
 func gameModeToText(modeRef: gameMode) -> [String] {
     var gameModeStatus: [String] = ["q","p"]
     
