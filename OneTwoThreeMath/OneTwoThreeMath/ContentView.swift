@@ -9,7 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        HomeView(operatorSelection: .addition, difficultySelection: .easy)
+        HomeView(operatorSelection: .addition,
+                 difficultySelection: .medium,
+                 shouldButtonsChange: .mid)
     }
 }
 

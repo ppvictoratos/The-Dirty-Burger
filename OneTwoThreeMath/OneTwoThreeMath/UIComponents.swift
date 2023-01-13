@@ -62,36 +62,6 @@ struct mathOperatorSelectors: View {
     }
 }
 
-struct back: View {
-
-    var body: some View {
-        Spacer()
-        Button {
-            print("Go down in difficulty")
-        } label: {
-            Text("<-")
-                .font(chalk)
-                .foregroundColor(.white)
-        }
-        Spacer()
-    }
-}
-//&
-struct forth: View {
-
-    var body: some View {
-        Spacer()
-        Button {
-            print("Go up in difficulty")
-        } label: {
-            Text("->")
-                .font(chalk)
-                .foregroundColor(.white)
-        }
-        Spacer()
-    }
-}
-
 struct writeAnswerHere: View {
     @State var points = [Line]()
     
@@ -125,25 +95,12 @@ struct writeAnswerHere: View {
 }
 
 struct UIComponents_Previews: PreviewProvider {
+    
     static var previews: some View {
         ZStack {
             Image("green")
                 .resizable()
                 .edgesIgnoringSafeArea(.all)
-            
-            VStack {
-                Spacer(minLength: 90)
-                HStack {
-                    back()
-                    Spacer()
-                    forth()
-                }
-                mathOperatorSelectors()
-                writeAnswerHere()
-                    .colorMultiply(.orange)
-                    .shadow(color: .black, radius: 10, x: 0, y: 0)
-                Spacer(minLength: 90)
-            }
-        }
+                    }
     }
 }
