@@ -16,6 +16,7 @@ enum mathOperator {
     case divison
 }
 
+//MARK: Location Helpers
 protocol locationState: CaseIterable {
     var title: String { get }
 }
@@ -32,6 +33,7 @@ enum gameLocation: String, locationState {
     case right = "too High"
 }
 
+//MARK: Difficulty Helpers
 protocol difficultyState: CaseIterable {
     var title: String { get }
 }
@@ -52,35 +54,36 @@ enum gameDifficulty: String, difficultyState {
 
 struct back<T: difficultyState, S: locationState>: View {
     
-    let difficultyStates: [T]
-    let locationStates: [S]
-    @State var currentIndex = 0
-    @Binding var selectedState: T
-    @State var currentLocation = 0
-    @Binding var userLocation: S
+    let difficulties: [T]
+    let locations: [S]
+    @State var difficultyID = 0
+    @Binding var selectedDifficulty: T
+    @State var locationID = 0
+    @Binding var selectedLocation: S
     
     var body: some View {
         Spacer()
+        //
         Button {
-            if currentIndex == 1 {
-                currentLocation = 1
+            if difficultyID == 0 {
+                locationID = 1
             }
-            else if currentIndex == 2 | 3 | 4 {
-                currentLocation = 2
-                currentIndex = currentIndex - 1
+            else if difficultyID == 2 | 3 | 4 {
+                locationID = 2
+                difficultyID = difficultyID - 1
             }
-            else if currentIndex == 5 {
-                currentLocation = 3
-                currentIndex = currentIndex - 1
+            else if difficultyID == 5 {
+                locationID = 3
+                difficultyID = difficultyID - 1
             }
-            selectedState = difficultyStates[currentIndex]
-            userLocation = locationStates[currentLocation]
+            selectedDifficulty = difficulties[difficultyID]
+            selectedLocation = locations[locationID]
         } label: {
-            if currentLocation == 1 {
+            if locationID == 1 {
                 Image(systemName: "gamecontroller.fill")
                     .foregroundColor(.white)
             }
-            else if currentLocation == 2 | 3 {
+            else if locationID != 1 {
                 Text("<-")
                     .font(chalk)
                     .foregroundColor(.white)
@@ -90,52 +93,52 @@ struct back<T: difficultyState, S: locationState>: View {
     }
 }
 
-struct forth<T: difficultyState, S: locationState>: View {
+//struct forth<T: difficultyState, S: locationState>: View {
     
-    let states: [T]
-    @State var currentIndex = 0
-    @Binding var selectedState: T
-    @Binding var userLocation: S
-    @State var endOfTheLine = 3
-    
-    var body: some View {
-        Spacer()
-        Button {
-            if currentIndex == 1 {
-                endOfTheLine = 1
-                currentIndex = currentIndex + 1
-            }
-            else if currentIndex == 5 {
-                endOfTheLine = 5
-            }
-            else if currentIndex == 2 | 3 | 4 {
-                endOfTheLine = 3
-                currentIndex = currentIndex + 1
-                endOfTheLine = 1
-            }
-            selectedState = states[currentIndex]
-        } label: {
-            switch endOfTheLine {
-            case 0:
-                Text("->")
-                    .font(chalk)
-                    .foregroundColor(.white)
-            case 1:
-                Text("->")
-                    .font(chalk)
-                    .foregroundColor(.white)
-            case 2:
-                Image(systemName: "person.fill")
-                    .foregroundColor(.white)
-            default:
-                Text("->")
-                    .font(chalk)
-                    .foregroundColor(.white)
-            }
-        }
-        Spacer()
-    }
-}
+//    let states: [T]
+//    @State var difficultyID = 0
+//    @Binding var selectedDifficulty: T
+//    @Binding var selectedLocation: S
+//    @State var endOfTheLine = 3
+//
+//    var body: some View {
+//        Spacer()
+//        Button {
+//            if difficultyID == 1 {
+//                endOfTheLine = 1
+//                difficultyID = difficultyID + 1
+//            }
+//            else if difficultyID == 5 {
+//                endOfTheLine = 5
+//            }
+//            else if difficultyID == 2 | 3 | 4 {
+//                endOfTheLine = 3
+//                difficultyID = difficultyID + 1
+//                endOfTheLine = 1
+//            }
+//            selectedDifficulty = states[difficultyID]
+//        } label: {
+//            switch endOfTheLine {
+//            case 0:
+//                Text("->")
+//                    .font(chalk)
+//                    .foregroundColor(.white)
+//            case 1:
+//                Text("->")
+//                    .font(chalk)
+//                    .foregroundColor(.white)
+//            case 2:
+//                Image(systemName: "person.fill")
+//                    .foregroundColor(.white)
+//            default:
+//                Text("->")
+//                    .font(chalk)
+//                    .foregroundColor(.white)
+//            }
+//        }
+//        Spacer()
+//    }
+//}
 
 //add switch statement to change image color w color multiplier
 func setGameColor(difficulty: gameDifficulty) -> Color {
@@ -182,14 +185,14 @@ struct HomeView: View {
                     Spacer(minLength: 15)
                     
                     HStack {
-                        back(difficultyStates: gameDifficulty.allCases,
-                             locationStates: gameLocation.allCases,
-                             selectedState: $difficultySelection,
-                             userLocation: $shouldButtonsChange)
+                        back(difficulties: gameDifficulty.allCases,
+                             locations: gameLocation.allCases,
+                             selectedDifficulty: $difficultySelection,
+                             selectedLocation: $shouldButtonsChange)
                         
-                        forth(states: gameDifficulty.allCases,
-                              selectedState: $difficultySelection,
-                              userLocation: $shouldButtonsChange)
+//                        forth(states: gameDifficulty.allCases,
+//                              selectedDifficulty: $difficultySelection,
+//                              selectedLocation: $shouldButtonsChange)
                     }
                     
                     Spacer(minLength: 15)
