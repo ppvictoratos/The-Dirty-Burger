@@ -75,17 +75,19 @@ struct back<T: difficultyState, S: locationState>: View {
                 difficultyID = 2
             } else if selectedDifficulty == difficulties[4] {
                 difficultyID = 3
+            } else if selectedDifficulty == difficulties[0] {
+                difficultyID = 0
             }
             
             //this is where the states are set after a button push
             selectedDifficulty = difficulties[difficultyID]
             selectedLocation = locations[locationID]
         } label: {
-            if locationID == 1 {
+            if difficultyID == 1 {
                 Image(systemName: "gamecontroller.fill")
                     .foregroundColor(.white)
             }
-            else if locationID != 1 {
+            else if difficultyID != 1 {
                 Text("<-")
                     .font(chalk)
                     .foregroundColor(.white)
@@ -111,24 +113,26 @@ struct forth<T: difficultyState, S: locationState>: View {
             
             //this is certainly a way to make the back button decrement state
             if selectedDifficulty == difficulties[4] {
-                difficultyID = 3
+                difficultyID = 4
             } else if selectedDifficulty == difficulties[3] {
-                difficultyID = 2
+                difficultyID = 4
             } else if selectedDifficulty == difficulties[2] {
-                difficultyID = 1
+                difficultyID = 3
             } else if selectedDifficulty == difficulties[1] {
-                difficultyID = 0
+                difficultyID = 2
+            } else if selectedDifficulty == difficulties[0] {
+                difficultyID = 1
             }
             
             //this is where the states are set after a button push
             selectedDifficulty = difficulties[difficultyID]
             selectedLocation = locations[locationID]
         } label: {
-            if locationID == 1 {
+            if difficultyID == 3 {
                 Image(systemName: "person.fill")
                     .foregroundColor(.white)
             }
-            else if locationID != 1 {
+            else if difficultyID != 1 {
                 Text("->")
                     .font(chalk)
                     .foregroundColor(.white)
