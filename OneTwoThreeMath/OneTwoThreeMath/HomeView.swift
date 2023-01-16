@@ -34,7 +34,7 @@ enum gameLocation: String, locationState {
 }
 
 //MARK: Difficulty Helpers
-protocol difficultyState: CaseIterable {
+protocol difficultyState: CaseIterable, Equatable {
     var title: String { get }
 }
 
@@ -63,19 +63,21 @@ struct back<T: difficultyState, S: locationState>: View {
     
     var body: some View {
         Spacer()
-        //
+        
         Button {
-            if difficultyID == 0 {
-                locationID = 1
+            
+            //this is certainly a way to make the back button decrement state
+            if selectedDifficulty == difficulties[1] {
+                difficultyID = 0
+            } else if selectedDifficulty == difficulties[2] {
+                difficultyID = 1
+            } else if selectedDifficulty == difficulties[3] {
+                difficultyID = 2
+            } else if selectedDifficulty == difficulties[4] {
+                difficultyID = 3
             }
-            else if difficultyID == 2 | 3 | 4 {
-                locationID = 2
-                difficultyID = difficultyID - 1
-            }
-            else if difficultyID == 5 {
-                locationID = 3
-                difficultyID = difficultyID - 1
-            }
+            
+            //this is where the states are set after a button push
             selectedDifficulty = difficulties[difficultyID]
             selectedLocation = locations[locationID]
         } label: {
@@ -93,52 +95,48 @@ struct back<T: difficultyState, S: locationState>: View {
     }
 }
 
-//struct forth<T: difficultyState, S: locationState>: View {
+struct forth<T: difficultyState, S: locationState>: View {
     
-//    let states: [T]
-//    @State var difficultyID = 0
-//    @Binding var selectedDifficulty: T
-//    @Binding var selectedLocation: S
-//    @State var endOfTheLine = 3
-//
-//    var body: some View {
-//        Spacer()
-//        Button {
-//            if difficultyID == 1 {
-//                endOfTheLine = 1
-//                difficultyID = difficultyID + 1
-//            }
-//            else if difficultyID == 5 {
-//                endOfTheLine = 5
-//            }
-//            else if difficultyID == 2 | 3 | 4 {
-//                endOfTheLine = 3
-//                difficultyID = difficultyID + 1
-//                endOfTheLine = 1
-//            }
-//            selectedDifficulty = states[difficultyID]
-//        } label: {
-//            switch endOfTheLine {
-//            case 0:
-//                Text("->")
-//                    .font(chalk)
-//                    .foregroundColor(.white)
-//            case 1:
-//                Text("->")
-//                    .font(chalk)
-//                    .foregroundColor(.white)
-//            case 2:
-//                Image(systemName: "person.fill")
-//                    .foregroundColor(.white)
-//            default:
-//                Text("->")
-//                    .font(chalk)
-//                    .foregroundColor(.white)
-//            }
-//        }
-//        Spacer()
-//    }
-//}
+    let difficulties: [T]
+    let locations: [S]
+    @State var difficultyID = 0
+    @Binding var selectedDifficulty: T
+    @State var locationID = 0
+    @Binding var selectedLocation: S
+    
+    var body: some View {
+        Spacer()
+        
+        Button {
+            
+            //this is certainly a way to make the back button decrement state
+            if selectedDifficulty == difficulties[4] {
+                difficultyID = 3
+            } else if selectedDifficulty == difficulties[3] {
+                difficultyID = 2
+            } else if selectedDifficulty == difficulties[2] {
+                difficultyID = 1
+            } else if selectedDifficulty == difficulties[1] {
+                difficultyID = 0
+            }
+            
+            //this is where the states are set after a button push
+            selectedDifficulty = difficulties[difficultyID]
+            selectedLocation = locations[locationID]
+        } label: {
+            if locationID == 1 {
+                Image(systemName: "person.fill")
+                    .foregroundColor(.white)
+            }
+            else if locationID != 1 {
+                Text("->")
+                    .font(chalk)
+                    .foregroundColor(.white)
+            }
+        }
+        Spacer()
+    }
+}
 
 //add switch statement to change image color w color multiplier
 func setGameColor(difficulty: gameDifficulty) -> Color {
@@ -150,9 +148,9 @@ func setGameColor(difficulty: gameDifficulty) -> Color {
     case .hard:
         return .red
     case .gameInfo:
-        return .green
+        return .purple
     case .playerStats:
-        return .red
+        return .cyan
     }
 }
 
@@ -160,6 +158,7 @@ struct HomeView: View {
     @State var operatorSelection: mathOperator
     @State var difficultySelection: gameDifficulty
     @State var shouldButtonsChange: gameLocation
+    @State private var color = Color.green
     
     //in order for this to default we may need to store the diffulty locally?
     //@State var beyondDifficultyExtremity: Bool
@@ -171,6 +170,7 @@ struct HomeView: View {
                 Image("green")
                     .resizable()
                     .edgesIgnoringSafeArea(.all)
+                //how do I animate this smoothly?
                     .colorMultiply(setGameColor(difficulty: difficultySelection))
                 
                 VStack {
@@ -190,9 +190,10 @@ struct HomeView: View {
                              selectedDifficulty: $difficultySelection,
                              selectedLocation: $shouldButtonsChange)
                         
-//                        forth(states: gameDifficulty.allCases,
-//                              selectedDifficulty: $difficultySelection,
-//                              selectedLocation: $shouldButtonsChange)
+                        forth(difficulties: gameDifficulty.allCases,
+                              locations: gameLocation.allCases,
+                              selectedDifficulty: $difficultySelection,
+                              selectedLocation: $shouldButtonsChange)
                     }
                     
                     Spacer(minLength: 15)
@@ -213,7 +214,7 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView(operatorSelection: .addition,
-                 difficultySelection: .medium,
+                 difficultySelection: .playerStats,
                  shouldButtonsChange: .mid)
     }
 }
