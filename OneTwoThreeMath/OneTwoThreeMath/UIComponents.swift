@@ -6,10 +6,23 @@
 //
 
 import Foundation
+import AVFoundation
 import SwiftUI
 
 //Giving things short names so it looks nicer (in code) when we use them
 let chalk = Font.custom("Chalkduster", size: 45)
+var soundEffectPlayer: AVAudioPlayer?
+
+func playSound(sound: String, type: String) {
+    if let path = Bundle.main.path(forResource: sound, ofType: type) {
+        do {
+            soundEffectPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
+            soundEffectPlayer?.play()
+        } catch {
+            print("Could not find the sound file")
+        }
+    }
+}
 
 //This is what appears when user taps & drags
 struct Line {
@@ -31,7 +44,9 @@ struct mathOperatorSelectors: View {
         VStack {
             HStack {
                 Spacer()
-                Button(action: { print("add")} ) {
+                Button(action: {
+                    playSound(sound: "Chalk Circle", type: "aif")
+                } ) {
                     Text("+")
                         .font(chalk)
                         .accentColor(.white)

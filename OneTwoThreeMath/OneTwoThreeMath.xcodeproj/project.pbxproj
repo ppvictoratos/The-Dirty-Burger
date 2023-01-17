@@ -27,6 +27,7 @@
 		1ACD1577296CD95300E72020 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACD1576296CD95300E72020 /* HomeView.swift */; };
 		1ACD1579296CDC4F00E72020 /* UIComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACD1578296CDC4F00E72020 /* UIComponents.swift */; };
 		1ACD157B296CDDB800E72020 /* PlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACD157A296CDDB800E72020 /* PlayView.swift */; };
+		1ACD157D297757C500E72020 /* Chalk Circle.aif in Resources */ = {isa = PBXBuildFile; fileRef = 1ACD157C297757C500E72020 /* Chalk Circle.aif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		1ACD1576296CD95300E72020 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		1ACD1578296CDC4F00E72020 /* UIComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIComponents.swift; sourceTree = "<group>"; };
 		1ACD157A296CDDB800E72020 /* PlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayView.swift; sourceTree = "<group>"; };
+		1ACD157C297757C500E72020 /* Chalk Circle.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Chalk Circle.aif"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				1ACD1566296CD33600E72020 /* SUI Project */,
 				1ACD1555296CD26100E72020 /* OG Project */,
 				1ACD154B296CD1FE00E72020 /* Assets.xcassets */,
+				1ACD157C297757C500E72020 /* Chalk Circle.aif */,
 				1ACD154D296CD1FE00E72020 /* Preview Content */,
 			);
 			path = OneTwoThreeMath;
@@ -193,6 +196,7 @@
 			files = (
 				1ACD154F296CD1FE00E72020 /* Preview Assets.xcassets in Resources */,
 				1ACD154C296CD1FE00E72020 /* Assets.xcassets in Resources */,
+				1ACD157D297757C500E72020 /* Chalk Circle.aif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
