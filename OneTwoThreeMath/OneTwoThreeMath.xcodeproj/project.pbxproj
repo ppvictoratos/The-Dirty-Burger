@@ -13,7 +13,6 @@
 		1ACD154F296CD1FE00E72020 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ACD154E296CD1FE00E72020 /* Preview Assets.xcassets */; };
 		1ACD1557296CD27A00E72020 /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACD1556296CD27A00E72020 /* MainMenuView.swift */; };
 		1ACD1559296CD28200E72020 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACD1558296CD28200E72020 /* SettingsView.swift */; };
-		1ACD1561296CD28D00E72020 /* StartCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACD155B296CD28D00E72020 /* StartCountView.swift */; };
 		1ACD1562296CD28D00E72020 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACD155C296CD28D00E72020 /* UserView.swift */; };
 		1ACD156E296CD35200E72020 /* CongtentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACD1567296CD35100E72020 /* CongtentView.swift */; };
 		1ACD156F296CD35200E72020 /* UserInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACD1568296CD35100E72020 /* UserInputView.swift */; };
@@ -35,7 +34,6 @@
 		1ACD154E296CD1FE00E72020 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1ACD1556296CD27A00E72020 /* MainMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
 		1ACD1558296CD28200E72020 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		1ACD155B296CD28D00E72020 /* StartCountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartCountView.swift; sourceTree = "<group>"; };
 		1ACD155C296CD28D00E72020 /* UserView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		1ACD1567296CD35100E72020 /* CongtentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongtentView.swift; sourceTree = "<group>"; };
 		1ACD1568296CD35100E72020 /* UserInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInputView.swift; sourceTree = "<group>"; };
@@ -105,7 +103,6 @@
 		1ACD1555296CD26100E72020 /* OG Project */ = {
 			isa = PBXGroup;
 			children = (
-				1ACD155B296CD28D00E72020 /* StartCountView.swift */,
 				1ACD155C296CD28D00E72020 /* UserView.swift */,
 				1ACD1558296CD28200E72020 /* SettingsView.swift */,
 				1ACD1556296CD27A00E72020 /* MainMenuView.swift */,
@@ -200,7 +197,6 @@
 			files = (
 				1ACD157B296CDDB800E72020 /* PlayView.swift in Sources */,
 				1ACD1579296CDC4F00E72020 /* UIComponents.swift in Sources */,
-				1ACD1561296CD28D00E72020 /* StartCountView.swift in Sources */,
 				1ACD1557296CD27A00E72020 /* MainMenuView.swift in Sources */,
 				1ACD1559296CD28200E72020 /* SettingsView.swift in Sources */,
 				1ACD154A296CD1FE00E72020 /* ContentView.swift in Sources */,
