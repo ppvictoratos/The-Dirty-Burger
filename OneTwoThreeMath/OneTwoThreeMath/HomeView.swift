@@ -184,7 +184,7 @@ struct HomeView: View {
                     
                     Spacer(minLength: 30)
                     
-                    mathOperatorSelectors()
+                    mathOperatorSelectors(isMuted: false)
                     
                     Spacer(minLength: 15)
                     

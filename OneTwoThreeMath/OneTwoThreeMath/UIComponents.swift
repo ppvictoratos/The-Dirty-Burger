@@ -32,6 +32,8 @@ struct Line {
 }
 
 struct mathOperatorSelectors: View {
+    @State var isMuted: Bool
+    
     enum operators {
         case add
         case sub
@@ -45,8 +47,14 @@ struct mathOperatorSelectors: View {
             HStack {
                 Spacer()
                 Button(action: {
-                    playSound(sound: "Chalk Circle", type: "aif")
-                } ) {
+                    if isMuted == true {
+                        print("mute")
+                    } else if isMuted == false {
+                        playSound(sound: "Chalk Circle", type: "aif")
+                    }
+                }
+                    )
+                    {
                     Text("+")
                         .font(chalk)
                         .accentColor(.white)
@@ -65,7 +73,7 @@ struct mathOperatorSelectors: View {
                         .accentColor(.white)
                 }
                 Spacer()
-                Button(action: { print("div")}) {
+                    Button(action: { isMuted.toggle()}) {
                     Text("÷")
                         .font(chalk)
                         .accentColor(.white)
