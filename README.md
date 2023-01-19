@@ -11,7 +11,9 @@ Legend for Trello:
 😌😐😩 are the difficulties of the tickets.
 
 😌 - Easy, 1/2 Days Work. 1 point. 
+
 😐 - Medium, 1 Days Work. 2 points.
+
 😩 - Hard, 2+ Days Work. 3 points.
 
 If something goes over 2 days, it should be broken into smaller tickets. This game is simple but in order to keep it simple, we need to do a lot of work :)
