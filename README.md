@@ -8,13 +8,13 @@ Work is being tracked here: https://trello.com/b/3FCaWGms/onetwothree
 
 Legend for Trello:
 
-😌😐😩 are the difficulties of the tickets.
+1️⃣2️⃣3️⃣ are the difficulties of the tickets.
 
-😌 - Easy, 1/2 Days Work. 1 point. 
+1️⃣ - Easy, 1/2 Days Work. 1 point. 
 
-😐 - Medium, 1 Days Work. 2 points.
+2️⃣ - Medium, 1 Days Work. 2 points.
 
-😩 - Hard, 2+ Days Work. 3 points.
+3️⃣ - Hard, 2+ Days Work. 3 points.
 
 If something goes over 2 days, it should be broken into smaller tickets. This game is simple but in order to keep it simple, we need to do a lot of work :)
 
