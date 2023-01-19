@@ -178,9 +178,15 @@ struct HomeView: View {
                     .colorMultiply(setGameColor(difficulty: difficultySelection))
                 
                 VStack {
-                    Text("OneTwoThree")
-                        .font(Font.custom("Chalkduster", size: 45)).bold()
-                        .foregroundColor(.white)
+                    VStack {
+                        Text("OneTwoThree")
+                            .font(Font.custom("Chalkduster", size: 45)).bold()
+                            .foregroundColor(.white)
+                        Text("Math in Plain English")
+                            .font(Font.custom("Chalkduster", size: 15)).fontWeight(.light)
+                            .foregroundColor(.white)
+                    }
+
                     
                     Spacer(minLength: 30)
                     

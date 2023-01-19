@@ -8,10 +8,6 @@
 
 import Foundation
 
-//this is where we deal with all game logic
-
-//we should store the hard coded examples in here
-
 class GameModel {
     
     let initialValue = 0
