@@ -45,11 +45,11 @@ extension difficultyState where Self: RawRepresentable, RawValue == String {
 }
 
 enum gameDifficulty: String, difficultyState {
-    case gameInfo = "Game Info"
-    case easy = "Easy"
-    case medium = "Medium"
-    case hard = "Hard"
-    case playerStats = "Player Stats"
+    case gameInfo = "Game Info"       //purple (0)
+    case easy = "Easy"                //green  (1)
+    case medium = "Medium"            //yellow (2)
+    case hard = "Hard"                //red    (3)
+    case playerStats = "Player Stats" //cyan   (4)
 }
 
 struct back<T: difficultyState, S: locationState>: View {

@@ -64,8 +64,8 @@
 			children = (
 				1ACD1547296CD1FE00E72020 /* OneTwoThreeMathApp.swift */,
 				1ACD1549296CD1FE00E72020 /* ContentView.swift */,
-				1ACD1576296CD95300E72020 /* HomeView.swift */,
 				1ACD157A296CDDB800E72020 /* PlayView.swift */,
+				1ACD1576296CD95300E72020 /* HomeView.swift */,
 				1ACD157E297A028200E72020 /* GameModel.swift */,
 				1ACD1578296CDC4F00E72020 /* UIComponents.swift */,
 				1ACD1575296CD35800E72020 /* Chalkduster.ttf */,
