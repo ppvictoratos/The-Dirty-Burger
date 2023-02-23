@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A07EC8929A707DD00EE06A6 /* Recycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A07EC8829A707DD00EE06A6 /* Recycle.swift */; };
+		1A5EB7DF2994670F00E3C412 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 1A5EB7DE2994670F00E3C412 /* ComposableArchitecture */; };
 		1ACD1548296CD1FE00E72020 /* OneTwoThreeMathApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACD1547296CD1FE00E72020 /* OneTwoThreeMathApp.swift */; };
 		1ACD154A296CD1FE00E72020 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACD1549296CD1FE00E72020 /* ContentView.swift */; };
 		1ACD154C296CD1FE00E72020 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ACD154B296CD1FE00E72020 /* Assets.xcassets */; };
@@ -19,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A07EC8829A707DD00EE06A6 /* Recycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recycle.swift; sourceTree = "<group>"; };
 		1ACD1544296CD1FE00E72020 /* OneTwoThreeMath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneTwoThreeMath.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ACD1547296CD1FE00E72020 /* OneTwoThreeMathApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneTwoThreeMathApp.swift; sourceTree = "<group>"; };
 		1ACD1549296CD1FE00E72020 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -37,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A5EB7DF2994670F00E3C412 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +72,7 @@
 				1ACD1576296CD95300E72020 /* HomeView.swift */,
 				1ACD157E297A028200E72020 /* GameModel.swift */,
 				1ACD1578296CDC4F00E72020 /* UIComponents.swift */,
+				1A07EC8829A707DD00EE06A6 /* Recycle.swift */,
 				1ACD1575296CD35800E72020 /* Chalkduster.ttf */,
 				1ACD154B296CD1FE00E72020 /* Assets.xcassets */,
 				1ACD157C297757C500E72020 /* Chalk Circle.aif */,
@@ -100,6 +105,9 @@
 			dependencies = (
 			);
 			name = OneTwoThreeMath;
+			packageProductDependencies = (
+				1A5EB7DE2994670F00E3C412 /* ComposableArchitecture */,
+			);
 			productName = OneTwoThreeMath;
 			productReference = 1ACD1544296CD1FE00E72020 /* OneTwoThreeMath.app */;
 			productType = "com.apple.product-type.application";
@@ -128,6 +136,9 @@
 				Base,
 			);
 			mainGroup = 1ACD153B296CD1FD00E72020;
+			packageReferences = (
+				1A5EB7DD2994670F00E3C412 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = 1ACD1545296CD1FE00E72020 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -159,6 +170,7 @@
 				1ACD1579296CDC4F00E72020 /* UIComponents.swift in Sources */,
 				1ACD157F297A028200E72020 /* GameModel.swift in Sources */,
 				1ACD154A296CD1FE00E72020 /* ContentView.swift in Sources */,
+				1A07EC8929A707DD00EE06A6 /* Recycle.swift in Sources */,
 				1ACD1577296CD95300E72020 /* HomeView.swift in Sources */,
 				1ACD1548296CD1FE00E72020 /* OneTwoThreeMathApp.swift in Sources */,
 			);
@@ -361,6 +373,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1A5EB7DD2994670F00E3C412 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1A5EB7DE2994670F00E3C412 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A5EB7DD2994670F00E3C412 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1ACD153C296CD1FD00E72020 /* Project object */;
 }

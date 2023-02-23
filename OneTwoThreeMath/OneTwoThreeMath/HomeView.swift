@@ -185,25 +185,15 @@ struct HomeView: View {
                         Text("Math in Plain English")
                             .font(Font.custom("Chalkduster", size: 15)).fontWeight(.light)
                             .foregroundColor(.white)
+                        Text("_______________________")
+                            .font(chalkSmall)
+                            .foregroundColor(.white)
                     }
-
-                    
-                    Spacer(minLength: 30)
-                    
-                    mathOperatorSelectors(isMuted: false)
-                    
-                    Spacer(minLength: 15)
-                    
-                    HStack {
-                        back(difficulties: gameDifficulty.allCases,
-                             locations: gameLocation.allCases,
-                             selectedDifficulty: $difficultySelection,
-                             selectedLocation: $shouldButtonsChange)
-                        
-                        forth(difficulties: gameDifficulty.allCases,
-                              locations: gameLocation.allCases,
-                              selectedDifficulty: $difficultySelection,
-                              selectedLocation: $shouldButtonsChange)
+                                        
+                    VStack {
+                        mathOperatorSelectors()
+                                                
+                        difficultySelector()
                     }
                     
                     Spacer(minLength: 15)
